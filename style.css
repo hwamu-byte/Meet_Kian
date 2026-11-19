@@ -1,0 +1,180 @@
+:root {
+    --pear: #f3eeb6;
+    --delltone: #84bf93;
+    --darknavy: #101f33;
+    --frost: #ddecf1;
+    --darkblue: #26788c;
+    --navy: #1b2a3d;
+    --leather: #5c1f2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: "Arimo";
+    font-optical-sizing: auto;
+    line-height: 1.7;
+    color: var(--frost);
+    padding: 10px;
+     background-image: radial-gradient(var(--pear) 20%, transparent 20%),
+     radial-gradient(var(--pear) 20%, transparent 20%);
+    background-color: var(--darknavy);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+    height: 200px;
+    width: 100%;
+}
+
+.page, footer {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin: 10px auto;
+    padding: clamp(16px, 4vw, 40px);
+    background: none;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 15px 10px 25px;
+    margin-bottom: 25px;
+    outline-offset: 3px;
+    background: var(--navy);
+    outline: solid;
+    outline-width: 1px;
+    outline-color: var(--frost);
+}
+
+.tagline {
+    font-family: "Monsieur La Doulaise";
+    font-style: bold;
+    font-size: 30px;
+    margin-top: 5px;
+    color: var(--frost)
+}
+
+section {
+    position: relative;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 10px;
+    background: var(--navy);
+    outline: solid;
+    outline-width: 1px;
+    outline-color: var(--frost);
+    outline-offset: 2px;
+}
+
+h1 {
+    font-family: "Libre Caslon Condensed", serif;
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    font-weight: 500;
+    font-style: normal;
+    color: var(--frost);
+    text-align: center;
+    font-size: 2.5rem;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.about-text p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.profilephoto {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: none;
+    background-color: var(--frost);
+    margin: 0;
+}
+
+h2 {
+    font-family: "Libre Caslon Condensed";
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+p {
+    flex: 1;
+    margin: 0;
+    text-align: justify;
+}
+
+.passionimg, .passionimgtwo {
+    --gap: 8px;
+    
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.passionimg > img,
+.passionimgtwo > img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.list {
+    margin-left: 1.5rem;
+}
+
+hr {
+    display: block;
+    height: 2px;
+    border: none;
+    background-color: var(--frost);
+    margin: 2px 0;
+}
+
+@media (max-width: 520px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-heading {
+        text-align: center;
+    }
+    
+    .profilephoto {
+        margin: 0;
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+    
+    .about-text p {
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
+}
